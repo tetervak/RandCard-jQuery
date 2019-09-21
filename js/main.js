@@ -19,9 +19,13 @@ let cardName, cardNumber, imgSrc, cardImg;
 
 // generates the random card info and pre-loads the matching card image
 function preloadCard(){
+    // the random number  0..51
     let rand = Math.floor(52 * Math.random());
-    cardName = FACES[rand % 13] + " of " + SUITS[Math.floor(rand / 13)];
+    // the card number 1..52 is matching the image file name
     cardNumber = rand + 1;
+    // the name of the card determined via the math trick
+    cardName = FACES[rand % 13] + " of " + SUITS[Math.floor(rand / 13)];
+    // load the image from the server
     imgSrc = `images/cards/${cardNumber}.png`;
     cardImg = new Image();
     cardImg.src = imgSrc;
@@ -29,8 +33,10 @@ function preloadCard(){
 
 // shows the pre-loaded card name and image
 function showCard(){
+    // insert the card name
     $("span.cardName").text(cardName);
-    $("img#card").attr("src", imgSrc);
+    // insert the image, set the src attribute of the image tag
+    $("#card").attr("src", imgSrc);
 }
 
 // makes the "Next Card" link work correctly
