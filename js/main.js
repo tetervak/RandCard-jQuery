@@ -28,9 +28,9 @@ class RandomCard{
 class RandomCardApplication{
 
     constructor(){
-        // generate random card info
+        // generate the first random card info
         this.card = new RandomCard();
-        // preload a first random card image file
+        // preload the first random card image file
         this.preloadCardImage();
     }
 
