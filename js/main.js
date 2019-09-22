@@ -66,8 +66,6 @@ class RandomCardApplication{
 }
 
 const randomCardApplication = new RandomCardApplication();
-$(function(){
-    randomCardApplication.init();
-});
+$(()=>randomCardApplication.init());
 
 
