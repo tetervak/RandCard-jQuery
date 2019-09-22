@@ -30,13 +30,14 @@ class RandomCardApplication{
     constructor(){
         // generate the first random card info
         this.card = new RandomCard();
+        // make the image object for preloading
+        this.image = new Image();
         // preload the first random card image file
         this.preloadCardImage();
     }
 
     // preload the image file from the server
     preloadCardImage(){
-        this.image = new Image();
         this.image.src = this.card.imgSrc;
     }
 
