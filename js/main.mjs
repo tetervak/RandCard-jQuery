@@ -1,6 +1,4 @@
 // Alex Tetervak, Sheridan College, Ontario
-
-"use strict"; // use the strict mode
 import { RandomCard } from "./random-card.mjs";
 
 // generate the first random card info

@@ -1,5 +1,4 @@
 // Alex Tetervak, Sheridan College, Ontario
-
 "use strict"; // use the strict mode
 $(function () {
     // insert the page footer with the formatted current date
