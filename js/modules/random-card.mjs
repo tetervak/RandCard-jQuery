@@ -12,10 +12,9 @@ class RandomCard {
         // the card number 1..52 is matching the image file name
         this.number = rand + 1;
         // the name of the card determined via the math trick
-        this.name
-            = RandomCard.FACES[rand % 13]
-            + " of "
-            + RandomCard.SUITS[Math.floor(rand / 13)];
+        this.face = RandomCard.FACES[rand % 13];
+        this.suit = RandomCard.SUITS[Math.floor(rand / 13)];
+        this.name = `${this.face} of ${this.suit}`;
     }
 }
 

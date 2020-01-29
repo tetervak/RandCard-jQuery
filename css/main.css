@@ -1,7 +1,11 @@
 /* Alex Tetervak, Sheridan College, Ontario */
 
-main{
+body{
+    padding-left: 1em;
     font-family: sans-serif;
+}
+
+main{
     padding-left: 1em;
 }
 
