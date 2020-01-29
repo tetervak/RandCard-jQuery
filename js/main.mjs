@@ -1,5 +1,5 @@
 // Alex Tetervak, Sheridan College, Ontario
-import { RandomCard } from "./random-card.mjs";
+import { RandomCard } from "./modules/random-card.mjs";
 
 // generate the first random card info
 let card = new RandomCard();
