@@ -10,29 +10,35 @@ preloadCardImage();
 
 // preload the image file from the server
 function preloadCardImage(){
-    image.src = card.imgSrc;
+    image.src = cardImageSrc(card.number);
+}
+
+function cardImageSrc(number){
+    return `images/cards/${number}.png`;
 }
 
 // called when the document is ready
 $(function (){
     showCard();
+    card = new RandomCard();
+    preloadCardImage();
     setupNextCardLink();
 });
 
 // show the card name and the card image on the page
 function showCard(){
     // insert the card name
-    $("span.cardName").text(card.cardName);
+    $("span.cardName").text(card.name);
     // insert the image, set the src attribute of the image tag
-    $("#card").attr("src", card.imgSrc);
+    $("#card").attr("src", cardImageSrc(card.number));
 }
 
 // makes "Next Card" link work correctly
 function setupNextCardLink(){
     $("a:contains('Next Card')").click(function(event){
         event.preventDefault();
-        card = new RandomCard();
         showCard();
+        card = new RandomCard();
         preloadCardImage();
     });
 }

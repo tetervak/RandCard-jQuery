@@ -10,14 +10,12 @@ class RandomCard {
         // the random number  0..51
         let rand = Math.floor(52 * Math.random());
         // the card number 1..52 is matching the image file name
-        let cardNumber = rand + 1;
+        this.number = rand + 1;
         // the name of the card determined via the math trick
-        this.cardName
+        this.name
             = RandomCard.FACES[rand % 13]
             + " of "
             + RandomCard.SUITS[Math.floor(rand / 13)];
-        // generate the image path
-        this.imgSrc = `images/cards/${cardNumber}.png`;
     }
 }
 
